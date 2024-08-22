@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Horse : Animal
+public class Horse : Animal // INHERITANCE
 {
-    [SerializeField] private float horseSpeed = 4f; // Slower speed for the slug
+    [SerializeField] private float horseSpeed = 4f; // POLYMORPHISM
 
     private void Start()
     {

@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Animal : MonoBehaviour
 {
-    protected float speed = 5f; // Movement speed
+    protected float speed = 5f; // Movement speed & ENCAPSULATION
     protected float moveDuration = 2f; // Time to move in one direction before switching
 
-    private float timeSinceDirectionChange;
+    private float timeSinceDirectionChange; // SIMPLE ENCAPSULATION
     private bool movingForward = true;
 
     private void Start()
@@ -32,7 +32,7 @@ public class Animal : MonoBehaviour
         Move();
     }
 
-    private void Move()
+    private void Move() // ABSTRACTION
     {
         // Move forward or backward based on the current direction
         Vector3 movementDirection = movingForward ? transform.forward : -transform.forward;
