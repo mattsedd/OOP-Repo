@@ -8,9 +8,9 @@ public class Animal : MonoBehaviour
     protected float moveDuration = 2f; // Time to move in one direction before switching
 
     private float timeSinceDirectionChange; // SIMPLE ENCAPSULATION
-    private bool movingForward = true;
+    protected bool movingForward = true;
 
-    private void Start()
+    protected virtual void Start()
     {
         timeSinceDirectionChange = 0f;
     }
@@ -32,7 +32,7 @@ public class Animal : MonoBehaviour
         Move();
     }
 
-    private void Move() // ABSTRACTION
+    protected virtual void Move() // ABSTRACTION
     {
         // Move forward or backward based on the current direction
         Vector3 movementDirection = movingForward ? transform.forward : -transform.forward;

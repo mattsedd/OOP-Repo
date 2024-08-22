@@ -4,12 +4,25 @@ using UnityEngine;
 
 public class Cat : Animal // INHERITANCE
 {
-    [SerializeField] private float catSpeed = 4f; // POLYMORPHISM
+    [SerializeField] private float catSpeed = 4f;
 
-    private void Start()
+    protected override void Start()
     {
-        // Set the slug's speed to be slower
-        speed = catSpeed;
+        base.Start(); // Call base class Start method to ensure base initialization
+        speed = catSpeed; // Set the horse's speed
 
     }
+
+    protected override void Move() // POLYMORPHISM
+    {
+        // Optionally, add specific behavior for Horse movement
+        // For example, you can modify the speed or movement logic
+        Vector3 movementDirection = movingForward ? transform.forward : -transform.forward;
+        transform.Translate(movementDirection * speed * Time.deltaTime, Space.World);
+
+        // Add additional behavior if needed
+        Debug.Log("The cat is moving!");
+    }
+
+
 }
