@@ -10,7 +10,7 @@ public class Animal : MonoBehaviour
     private float timeSinceDirectionChange; // SIMPLE ENCAPSULATION
     protected bool movingForward = true;
 
-    protected virtual void Start()
+    protected virtual void Start() // READY FOR POLYMORPHISM!
     {
         timeSinceDirectionChange = 0f;
     }
@@ -32,7 +32,7 @@ public class Animal : MonoBehaviour
         Move();
     }
 
-    protected virtual void Move() // ABSTRACTION
+    protected virtual void Move() // ABSTRACTION & READY FOR POLYMORPHISM!
     {
         // Move forward or backward based on the current direction
         Vector3 movementDirection = movingForward ? transform.forward : -transform.forward;

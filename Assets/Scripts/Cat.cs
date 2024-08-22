@@ -8,19 +8,18 @@ public class Cat : Animal // INHERITANCE
 
     protected override void Start()
     {
-        base.Start(); // Call base class Start method to ensure base initialization
-        speed = catSpeed; // Set the horse's speed
+        base.Start(); 
+        speed = catSpeed; 
 
     }
 
     protected override void Move() // POLYMORPHISM
     {
-        // Optionally, add specific behavior for Horse movement
-        // For example, you can modify the speed or movement logic
+       
         Vector3 movementDirection = movingForward ? transform.forward : -transform.forward;
         transform.Translate(movementDirection * speed * Time.deltaTime, Space.World);
 
-        // Add additional behavior if needed
+        
         Debug.Log("The cat is moving!");
     }
 

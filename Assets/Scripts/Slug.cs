@@ -8,19 +8,18 @@ public class Slug : Animal // INHERITANCE
 
     protected override void Start()
     {
-        base.Start(); // Call base class Start method to ensure base initialization
-        speed = slugSpeed; // Set the horse's speed
+        base.Start(); 
+        speed = slugSpeed; 
 
     }
 
     protected override void Move() // POLYMORPHISM
     {
-        // Optionally, add specific behavior for Horse movement
-        // For example, you can modify the speed or movement logic
+        
         Vector3 movementDirection = movingForward ? transform.forward : -transform.forward;
         transform.Translate(movementDirection * speed * Time.deltaTime, Space.World);
 
-        // Add additional behavior if needed
+        
         Debug.Log("The slug is moving!");
     }
 
