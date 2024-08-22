@@ -8,6 +8,9 @@ public class TitleMenu : MonoBehaviour
 {
 
     [SerializeField] private GameObject titlePanel;
+    [SerializeField] private GameObject cat;
+    [SerializeField] private GameObject slug;
+    [SerializeField] private GameObject horse;
 
     // Start is called before the first frame update
     void Start()
@@ -24,5 +27,10 @@ public class TitleMenu : MonoBehaviour
     public void PlayButtonClickedCallback()
     {
         titlePanel.SetActive(false);
+        cat.SetActive(true);
+        horse.SetActive(true);
+        slug.SetActive(true);
+
+
     }
 }
